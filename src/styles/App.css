@@ -2,5 +2,5 @@
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-rows: 1fr 515px 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }

@@ -1,8 +1,9 @@
 import "../styles/Header.css";
 import Tooltip, { tooltipClasses } from "@mui/material/Tooltip";
 import { styled } from "@mui/material/styles";
+import Toggle from "./Toggle.jsx";
 
-function Header({ handleForm, color, colorScheme, handleSubmit }) {
+function Header({ handleForm, color, colorScheme, handleSubmit, handleClick }) {
   const LightTooltip = styled(({ className, ...props }) => (
     <Tooltip {...props} classes={{ popper: className }} />
   ))(() => ({
@@ -43,6 +44,8 @@ function Header({ handleForm, color, colorScheme, handleSubmit }) {
             <option value="quad">Quad</option>
           </select>
         </LightTooltip>
+
+        <Toggle handleClick={handleClick} />
 
         <button
           onClick={handleSubmit}

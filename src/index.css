@@ -1,3 +1,17 @@
+:root {
+  --color1--: #ffffff;
+  --color2--: #111827;
+  --color3--: #374151;
+  --color4--: #2b283a;
+}
+
+.dark {
+  --color1--: #374151;
+  --color2--: #ffffff;
+  --color3--: #ffffff;
+  --color4--: #ffffff;
+}
+
 * {
   box-sizing: border-box;
   -webkit-user-select: none;

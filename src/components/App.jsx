@@ -3,8 +3,15 @@ import { useEffect, useState } from "react";
 import Header from "./Header.jsx";
 import Main from "./Main.jsx";
 import Footer from "./Footer.jsx";
+import useLocalStorage from "use-local-storage";
 
 function App() {
+  const defaultDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const [theme, setTheme] = useLocalStorage(
+    "theme",
+    defaultDark ? "dark" : "light"
+  );
+
   const [formData, setForm] = useState({
     color: "#F55A5A",
     colorScheme: "monochrome",
@@ -62,12 +69,13 @@ function App() {
   ));
 
   return (
-    <div className="container">
+    <div className={`container ${theme}`}>
       <Header
         handleForm={handleForm}
         color={formData.color}
         colorScheme={formData.colorScheme}
         handleSubmit={handleSubmit}
+        handleClick={() => setTheme(theme === "light" ? "dark" : "light")}
       />
       <main>{mainEls}</main>
 
