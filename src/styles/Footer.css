@@ -16,4 +16,5 @@ footer > span {
   font-size: 12px;
   line-height: 24px;
   text-align: center;
+  cursor: pointer;
 }
