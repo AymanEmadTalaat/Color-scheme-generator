@@ -1,0 +1,11 @@
+main {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+main > div {
+  height: 100%;
+  border-right: 1px solid black;
+  flex: 1;
+}
